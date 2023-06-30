@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <nav className="bg-white w-full z-20 top-0 left-0 border-b border-gray-200">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <Link href="https://flowbite.com/" className="flex items-center">
+                <Link href="https://fitspark.vercel.app/" className="flex items-center">
                     <img
                         src="/Fit-Spark-Logo.png"
                         className="h-14 mr-3"
@@ -20,12 +20,13 @@ const Navbar = () => {
                     />
                 </Link>
                 <div className="flex md:order-2">
-                    <button
+                    <Link
+                        href="#pricing"
                         type="button"
                         className="text-white bg-violet-700 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0"
                     >
                         Get started
-                    </button>
+                    </Link>
                     <button
                         onClick={toggleMenu}
                         type="button"
@@ -57,7 +58,7 @@ const Navbar = () => {
                     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
                         <li>
                             <Link
-                                href="#"
+                                href="/"
                                 className="block py-2 pl-3 pr-4 text-white bg-violet-700 rounded md:bg-transparent md:text-violet-700 md:p-0"
                                 aria-current="page"
                             >
@@ -74,15 +75,15 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                href="#"
+                                href="#pricing"
                                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-violet-700 md:p-0"
                             >
-                                Services
+                                Pricing
                             </Link>
                         </li>
                         <li>
                             <Link
-                                href="#"
+                                href="/contact"
                                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-violet-700 md:p-0"
                             >
                                 Contact

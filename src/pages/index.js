@@ -5,7 +5,7 @@ import Benefits from '@/components/Benefits';
 import Pricing from '@/components/Pricing';
 import Footer from '@/components/Footer';
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="bg-gray-100">
       <Navbar />
@@ -17,4 +17,6 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Home;

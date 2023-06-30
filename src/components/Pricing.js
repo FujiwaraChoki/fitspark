@@ -1,11 +1,19 @@
+import { useRouter } from 'next/router';
+
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 SwiperCore.use([Navigation, Pagination]);
 
 const PricingSection = () => {
+    const router = useRouter();
+
+    const handleChosePlan = (plan) => {
+        router.push('/signup?plan_id=' + plan);
+    };
+
     return (
-        <section className="py-12">
+        <section className="py-12" id="pricing">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">
                     Choose a Subscription Plan
@@ -48,7 +56,9 @@ const PricingSection = () => {
                                 </li>
                             </ul>
                             <div className="flex justify-center mt-6">
-                                <button className="bg-violet-700 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300">
+                                <button className="bg-violet-700 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300"
+                                    onClick={() => handleChosePlan(1)}
+                                >
                                     Choose Plan
                                 </button>
                             </div>
@@ -76,7 +86,9 @@ const PricingSection = () => {
                                 </li>
                             </ul>
                             <div className="flex justify-center mt-6">
-                                <button className="bg-white hover:bg-gray-200 text-violet-700 font-semibold py-2 px-6 rounded-full transition-colors duration-300">
+                                <button className="bg-white hover:bg-gray-200 text-violet-700 font-semibold py-2 px-6 rounded-full transition-colors duration-300"
+                                    onClick={() => handleChosePlan(2)}
+                                >
                                     Choose Plan
                                 </button>
                             </div>
@@ -107,7 +119,9 @@ const PricingSection = () => {
                                 </li>
                             </ul>
                             <div className="flex justify-center mt-6">
-                                <button className="bg-violet-700 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300">
+                                <button className="bg-violet-700 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300"
+                                    onClick={() => handleChosePlan(3)}
+                                >
                                     Choose Plan
                                 </button>
                             </div>
