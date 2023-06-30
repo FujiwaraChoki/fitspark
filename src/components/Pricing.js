@@ -14,7 +14,6 @@ const PricingSection = () => {
                     slidesPerView={1}
                     spaceBetween={30}
                     navigation
-                    pagination={{ clickable: true }}
                     breakpoints={{
                         640: {
                             slidesPerView: 1.5,
@@ -37,7 +36,7 @@ const PricingSection = () => {
                                 <span className="text-2xl font-semibold">$14.99</span>
                                 <span className="text-gray-600 ml-2">/month</span>
                             </div>
-                            <ul className="text-gray-600">
+                            <ul className="text-gray-600 text-center">
                                 <li>
                                     <span role="img" aria-label="Workout Plans">🏋️‍♂️</span> Personalized Workout Plans
                                 </li>
@@ -57,12 +56,12 @@ const PricingSection = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="bg-violet-700 rounded-lg p-6 border-2 border-white">
-                            <h3 className="text-xl font-semibold text-white mb-4">Popular</h3>
+                            <h3 className="text-xl font-semibold text-white mb-4">Most Popular</h3>
                             <div className="flex justify-center items-center mb-4">
                                 <span className="text-2xl font-semibold text-white">$24.99</span>
                                 <span className="text-white ml-2">/month</span>
                             </div>
-                            <ul className="text-white">
+                            <ul className="text-white text-center">
                                 <li>
                                     <span role="img" aria-label="Workout Plans">🏋️‍♂️</span> All Basic features
                                 </li>
@@ -90,7 +89,7 @@ const PricingSection = () => {
                                 <span className="text-2xl font-semibold">$49.99</span>
                                 <span className="text-gray-600 ml-2">/month</span>
                             </div>
-                            <ul className="text-gray-600">
+                            <ul className="text-gray-600 text-center">
                                 <li>
                                     <span role="img" aria-label="Workout Plans">🏋️‍♂️</span> All Popular features
                                 </li>
