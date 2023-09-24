@@ -1,5 +1,5 @@
 import { initializeApp, getApps } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, updateCurrentUser, createUserWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -15,6 +15,6 @@ let firebase_app = getApps().length === 0 ? initializeApp(firebaseConfig) : getA
 
 const auth = getAuth(firebase_app);
 
-export { auth };
+export { auth, updateCurrentUser, createUserWithEmailAndPassword };
 
 export default firebase_app;

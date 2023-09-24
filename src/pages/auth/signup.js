@@ -3,9 +3,8 @@ import Footer from '@/components/Footer';
 import { toast } from 'react-hot-toast';
 
 import { useState } from 'react';
-import { auth } from '../../../firebase/config';
+import { auth, createUserWithEmailAndPassword, updateCurrentUser } from '../../../firebase/config';
 import { useRouter } from 'next/router';
-import { createUserWithEmailAndPassword, updateCurrentUser } from 'firebase/auth';
 
 const SignUp = () => {
     const router = useRouter();
