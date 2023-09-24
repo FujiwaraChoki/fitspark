@@ -2,8 +2,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { toast } from 'react-hot-toast';
 
-import { useState } from 'react';
-import { auth, createUserWithEmailAndPassword, updateCurrentUser } from '../../../firebase/config';
+import { useEffect, useState } from 'react';
+import { auth, createUserWithEmailAndPassword, updateProfile } from '../../../firebase/config';
 import { useRouter } from 'next/router';
 
 const SignUp = () => {
@@ -13,6 +13,7 @@ const SignUp = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState();
 
     const handleNameChange = (e) => {
         setName(e.target.value);
@@ -26,35 +27,36 @@ const SignUp = () => {
         setPassword(e.target.value);
     };
 
-    const getCurrentTimestamp = () => {
-        return Math.floor(Date.now() / 1000).toString();
-    };
-
     const register = () => {
         return new Promise(async (resolve, reject) => {
             try {
                 const response = await createUserWithEmailAndPassword(auth, email, password);
-                console.log(response);
+                console.log(response.user);
 
                 // If the user was successfully created, set their display name
                 if (response.user) {
-                    await updateCurrentUser(auth, {
-                        displayName: name,
-                        metadata: {
-                            plan_id: plan_id,
-                            created_at: getCurrentTimestamp(),
-                        }
+                    await updateProfile(response.user, {
+                        displayName: name + "|" + plan_id
                     });
+
+                    setMessage('Signed up!');
                 }
 
+                setMessage('Signed up!');
                 resolve(response);
+                setMessage('Signed up!');
             } catch (error) {
+                setMessage(error.message);
                 console.log(error);
                 reject(error);
             }
         });
     };
 
+
+    useEffect(() => {
+        console.log(auth.currentUser);
+    }, []);
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -132,19 +134,18 @@ const SignUp = () => {
                         <button
                             onClick={() => toast.promise(register(), {
                                 loading: "Signing up...",
-                                success: "Signed up!",
-                                error: "Something went wrong!",
+                                success: <span>{message}</span>,
+                                error: <span>{message}</span>,
                             })}
                             className="bg-violet-700 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-full transition-colors duration-300"
                         >
                             Sign Up
                         </button>
-
                     </div>
                 </div>
             </div>
             <Footer />
-        </div >
+        </div>
     );
 };
 
