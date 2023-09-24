@@ -1,8 +1,11 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { toast } from 'react-hot-toast';
 
 import { useState } from 'react';
+import { auth } from '../../../firebase/config';
 import { useRouter } from 'next/router';
+import { createUserWithEmailAndPassword, updateCurrentUser } from 'firebase/auth';
 
 const SignUp = () => {
     const router = useRouter();
@@ -24,13 +27,35 @@ const SignUp = () => {
         setPassword(e.target.value);
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Perform form submission logic here
-
-        // Redirect to a success page or other appropriate destination
-        router.push('/success');
+    const getCurrentTimestamp = () => {
+        return Math.floor(Date.now() / 1000).toString();
     };
+
+    const register = () => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const response = await createUserWithEmailAndPassword(auth, email, password);
+                console.log(response);
+
+                // If the user was successfully created, set their display name
+                if (response.user) {
+                    await updateCurrentUser(auth, {
+                        displayName: name,
+                        metadata: {
+                            plan_id: plan_id,
+                            created_at: getCurrentTimestamp(),
+                        }
+                    });
+                }
+
+                resolve(response);
+            } catch (error) {
+                console.log(error);
+                reject(error);
+            }
+        });
+    };
+
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -43,7 +68,7 @@ const SignUp = () => {
                     Get started with Fitspark today and enjoy personalized workout plans
                     tailored to your fitness goals.
                 </p>
-                <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
+                <div className="max-w-md mx-auto">
                     {plan_id && <input type="hidden" name="plan_id" value={plan_id} />}
                     <div className="mb-4">
                         <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
@@ -106,16 +131,21 @@ const SignUp = () => {
                     </div>
                     <div className="flex justify-center">
                         <button
-                            type="submit"
+                            onClick={() => toast.promise(register(), {
+                                loading: "Signing up...",
+                                success: "Signed up!",
+                                error: "Something went wrong!",
+                            })}
                             className="bg-violet-700 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-full transition-colors duration-300"
                         >
                             Sign Up
                         </button>
+
                     </div>
-                </form>
+                </div>
             </div>
             <Footer />
-        </div>
+        </div >
     );
 };
 
