@@ -16,7 +16,7 @@ const Benefits = () => {
                             <Image src="/time.svg" alt="Time-Efficient Workouts" width={64} height={64} />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-800 mt-4">Time-Efficient Workouts</h3>
-                        <p className="text-gray-600 mt-2">
+                        <p className="text-gray-600 mt-2 text-center">
                             Fit quick and effective workouts into your busy schedule with our time-efficient routines.
                         </p>
                     </div>
@@ -25,7 +25,7 @@ const Benefits = () => {
                             <Image src="/office.svg" alt="Office-Friendly Exercises" width={64} height={64} />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-800 mt-4">Office-Friendly Exercises</h3>
-                        <p className="text-gray-600 mt-2">
+                        <p className="text-gray-600 mt-2 text-center">
                             Stay active even at work with exercises you can perform in your office or during work breaks.
                         </p>
                     </div>
@@ -34,16 +34,16 @@ const Benefits = () => {
                             <Image src="/stress.svg" alt="Stress Management Strategies" width={64} height={64} />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-800 mt-4">Stress Management Strategies</h3>
-                        <p className="text-gray-600 mt-2">
+                        <p className="text-gray-600 mt-2 text-center">
                             Learn stress reduction techniques, mindfulness practices, and achieve a better work-life balance.
                         </p>
                     </div>
                     <div className="flex flex-col items-center">
                         <div className="rounded-full p-4">
-                            <Image src="/mobile.svg" alt="Mobile Accessibility" width={64} height={64} />
+                            <Image src="/mobile.svg" alt="Mobile Accessibility" width={45} height={45} />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-800 mt-4">Mobile Accessibility</h3>
-                        <p className="text-gray-600 mt-2">
+                        <p className="text-gray-600 mt-2 text-center">
                             Access workouts and guidance on the go, as our fitness coaching platform is mobile-friendly.
                         </p>
                     </div>
@@ -52,7 +52,7 @@ const Benefits = () => {
                             <Image src="/healthy.svg" alt="Accountability and Motivation" width={64} height={64} />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-800 mt-4">Accountability and Motivation</h3>
-                        <p className="text-gray-600 mt-2">
+                        <p className="text-gray-600 mt-2 text-center">
                             Stay motivated and committed to your fitness goals with tracking tools, progress monitoring, and support.
                         </p>
                     </div>
@@ -61,7 +61,7 @@ const Benefits = () => {
                             <Image src="/accountability.svg" alt="Healthy Lifestyle Integration" width={64} height={64} />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-800 mt-4">Healthy Lifestyle Integration</h3>
-                        <p className="text-gray-600 mt-2">
+                        <p className="text-gray-600 mt-2 text-center">
                             Adopt a holistic approach to wellness with nutrition advice, meal planning support, and healthy habit tips.
                         </p>
                     </div>

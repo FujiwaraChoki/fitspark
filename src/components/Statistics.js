@@ -12,28 +12,34 @@ const StatisticsSection = () => {
                         </p>
                     </div>
                     <div className="text-center">
+                        <div className="text-6xl mb-5">🏋️‍♂️</div>
                         <h3 className="text-4xl font-bold text-purple-500 mb-2">+85%</h3>
                         <p className="text-gray-800">Average Increase in Physical Activity</p>
                     </div>
                     <div className="text-center">
+                        <div className="text-6xl mb-5">⚖️</div>
                         <h3 className="text-4xl font-bold text-purple-500 mb-2">-10 lbs</h3>
                         <p className="text-gray-800">Average Weight Loss</p>
                     </div>
                     <div className="text-center">
+                        <div className="text-6xl mb-5">😌</div>
                         <h3 className="text-4xl font-bold text-purple-500 mb-2">+50%</h3>
                         <p className="text-gray-800">Stress Reduction</p>
                     </div>
                     <div className="text-center">
+                        <div className="text-6xl mb-5">😃</div>
                         <h3 className="text-4xl font-bold text-purple-500 mb-2">98%</h3>
                         <p className="text-gray-800">User Satisfaction Rate</p>
                     </div>
                     <div className="text-center">
-                        <h3 className="text-4xl font-bold text-purple-500 mb-2">200+</h3>
+                        <div className="text-6xl mb-5">🏋️‍♀️</div>
+                        <h3 className="text-4xl font-bold text-purple-500 mb-2"><i>Unlimited</i></h3>
                         <p className="text-gray-800">Workout Plans and Exercises</p>
                     </div>
+
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

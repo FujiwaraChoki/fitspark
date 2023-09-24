@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <nav className="bg-white w-full z-20 top-0 left-0 border-b border-gray-200">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <Link href="https://fitspark.vercel.app/" className="flex items-center">
+                <Link href="/" className="flex items-center">
                     <img
                         src="/Fit-Spark-Logo.png"
                         className="h-14 mr-3"
@@ -67,7 +67,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
-                                href="#"
+                                href="/about"
                                 className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-violet-700 md:p-0"
                             >
                                 About

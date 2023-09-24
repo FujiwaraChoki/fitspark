@@ -39,6 +39,10 @@ const SignUp = () => {
                 <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">
                     Sign Up for an Exciting Fitness Experience!
                 </h2>
+                <p className="text-gray-600 text-center mb-6">
+                    Get started with Fitspark today and enjoy personalized workout plans
+                    tailored to your fitness goals.
+                </p>
                 <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
                     {plan_id && <input type="hidden" name="plan_id" value={plan_id} />}
                     <div className="mb-4">
@@ -86,10 +90,20 @@ const SignUp = () => {
                             required
                         />
                     </div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+                    <div className="mb-4">
+                        <label htmlFor="privacy" className="flex items-center">
+                            <input
+                                type="checkbox"
+                                id="privacy"
+                                name="privacy"
+                                className="form-checkbox"
+                                required
+                            />
+                            <span className="ml-2 text-gray-700 text-sm font-bold">
+                                I agree to the <a href="/policy/privacy" className="underline">Privacy Policy</a>
+                            </span>
+                        </label>
+                    </div>
                     <div className="flex justify-center">
                         <button
                             type="submit"

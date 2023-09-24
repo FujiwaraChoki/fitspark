@@ -1,7 +1,8 @@
-import { useRouter } from 'next/router';
+import Button from './Button';
 
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useRouter } from 'next/router';
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -9,7 +10,7 @@ const PricingSection = () => {
     const router = useRouter();
 
     const handleChosePlan = (plan) => {
-        router.push('/signup?plan_id=' + plan);
+        router.push('/auth/signup?plan_id=' + plan);
     };
 
     return (
@@ -41,7 +42,7 @@ const PricingSection = () => {
                         <div className="bg-gray-100 rounded-lg p-6 shadow-lg border-2 border-gray-200">
                             <h3 className="text-xl font-semibold text-gray-800 mb-4">Basic</h3>
                             <div className="flex justify-center items-center mb-4">
-                                <span className="text-2xl font-semibold">$14.99</span>
+                                <span className="text-2xl font-semibold">$9.99</span>
                                 <span className="text-gray-600 ml-2">/month</span>
                             </div>
                             <ul className="text-gray-600 text-center">
@@ -68,7 +69,7 @@ const PricingSection = () => {
                         <div className="bg-violet-700 rounded-lg p-6 border-2 border-white">
                             <h3 className="text-xl font-semibold text-white mb-4">Most Popular</h3>
                             <div className="flex justify-center items-center mb-4">
-                                <span className="text-2xl font-semibold text-white">$24.99</span>
+                                <span className="text-2xl font-semibold text-white">$19.99</span>
                                 <span className="text-white ml-2">/month</span>
                             </div>
                             <ul className="text-white text-center">
@@ -98,7 +99,7 @@ const PricingSection = () => {
                         <div className="bg-gray-100 rounded-lg p-6 border-2 border-gray-200">
                             <h3 className="text-xl font-semibold text-gray-800 mb-4">Premium</h3>
                             <div className="flex justify-center items-center mb-4">
-                                <span className="text-2xl font-semibold">$49.99</span>
+                                <span className="text-2xl font-semibold">$34.99</span>
                                 <span className="text-gray-600 ml-2">/month</span>
                             </div>
                             <ul className="text-gray-600 text-center">

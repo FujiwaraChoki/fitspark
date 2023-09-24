@@ -15,13 +15,13 @@ const Footer = () => {
                         <p className="text-xl font-semibold text-white text-center mt-2">Stay Fit, Stay Healthy</p>
                     </div>
                     <div className="flex mt-4 md:mt-0 md:order-1">
-                        <Link href="#" className="text-white hover:text-violet mx-3 transition-colors duration-300">
+                        <Link href="/policy/tos" className="text-white hover:text-gray-300 hover:underline mx-3 transition-colors duration-300">
                             Terms of Service
                         </Link>
-                        <Link href="#" className="text-white hover:text-violet mx-3 transition-colors duration-300">
+                        <Link href="/policy/privacy" className="text-white hover:text-gray-300 hover:underline mx-3 transition-colors duration-300">
                             Privacy Policy
                         </Link>
-                        <Link href="#" className="text-white hover:text-violet mx-3 transition-colors duration-300">
+                        <Link href="/contact" className="text-white hover:text-gray-300 hover:underline mx-3 transition-colors duration-300">
                             Contact Us
                         </Link>
                     </div>
