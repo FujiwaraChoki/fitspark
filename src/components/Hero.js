@@ -27,18 +27,18 @@ const HeroSection = () => {
                         <p className="text-lg text-gray-200 mb-6">
                             Get in shape, stay active, and lead a healthier lifestyle with our AI-powered fitness coach. Designed for busy urban professionals with sedentary lifestyles, we offer personalized workouts, stress management strategies, and mobile accessibility.
                         </p>
-                        <div className="flex items-center text-white mb-10">
+                        <div className="flex items-center text-white mb-10 gap-4">
                             <div className="mr-4">
-                                <h2 className="text-3xl font-semibold">100K+</h2>
-                                <p className="text-sm">Happy Users</p>
+                                <h2 className="text-3xl font-semibold">4K+</h2>
+                                <p className="text-sm">Workouts<br />Generated</p>
                             </div>
                             <div className="mr-4">
                                 <h2 className="text-3xl font-semibold">30+</h2>
-                                <p className="text-sm">Coaches</p>
+                                <p className="text-sm">Supportive<br />Coaches</p>
                             </div>
                             <div className="mr-4">
                                 <h2 className="text-3xl font-semibold">24/7</h2>
-                                <p className="text-sm">Access</p>
+                                <p className="text-sm">Fitspark<br />Access</p>
                             </div>
                         </div>
                         <Button
